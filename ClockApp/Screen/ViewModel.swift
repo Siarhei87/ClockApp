@@ -15,6 +15,7 @@ class ViewModel: ObservableObject {
     @Published var isLapStarted: Bool = false
     @Published var leftButtonType: LeftButtonType = .lapPassive
     @Published var totalTimeDegree: Double = 0
+    @Published var totalTimeMinuteDegree: Double = 0
     @Published var currentLapDegree: Double?
     
     private var lapIndex: Int = 0
@@ -86,6 +87,7 @@ class ViewModel: ObservableObject {
             
             if timeElapsed != 0 {
                 self.totalTimeDegree = Double.pi * Double(timeElapsed) / 30
+                self.totalTimeMinuteDegree = Double.pi * Double(timeElapsed) / 900
             }
             if laptimeElapsed != 0 {
                 self.currentLapDegree = Double.pi * Double(laptimeElapsed) / 30

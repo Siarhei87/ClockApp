@@ -155,17 +155,13 @@
 		E2854B7726428F8C00E7CDFF /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				E2854B832642A69400E7CDFF /* ActionButtonStyle.swift */,
-				E2854B7B2642928700E7CDFF /* ClockView.swift */,
-				E2854B7926428FF900E7CDFF /* ColorExtension.swift */,
+				E2854B93264305EB00E7CDFF /* Enumerations */,
+				E2854B92264305D700E7CDFF /* Extensions */,
+				E2854B91264305C800E7CDFF /* Shapes */,
+				E2854B90264305B900E7CDFF /* Styles */,
+				E2854B8F264305AB00E7CDFF /* Views */,
 				E2854B4E26428F5C00E7CDFF /* ContentView.swift */,
-				E2854B812642A3B000E7CDFF /* FontExtension.swift */,
 				E2854B872642B40B00E7CDFF /* LapItemPresenter.swift */,
-				E2854B892642B49400E7CDFF /* LapType.swift */,
-				E2854B8D2642CAEB00E7CDFF /* LeftButtonType.swift */,
-				E2854B852642AE7400E7CDFF /* NeedleView.swift */,
-				E2854B7F26429F9B00E7CDFF /* NumbersView.swift */,
-				E2854B7D2642933D00E7CDFF /* TickShape.swift */,
 				E2854B8B2642B57F00E7CDFF /* ViewModel.swift */,
 			);
 			path = Screen;
@@ -177,6 +173,50 @@
 				E2854B4C26428F5C00E7CDFF /* ClockAppApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		E2854B8F264305AB00E7CDFF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E2854B7B2642928700E7CDFF /* ClockView.swift */,
+				E2854B852642AE7400E7CDFF /* NeedleView.swift */,
+				E2854B7F26429F9B00E7CDFF /* NumbersView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E2854B90264305B900E7CDFF /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				E2854B832642A69400E7CDFF /* ActionButtonStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		E2854B91264305C800E7CDFF /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				E2854B7D2642933D00E7CDFF /* TickShape.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		E2854B92264305D700E7CDFF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E2854B7926428FF900E7CDFF /* ColorExtension.swift */,
+				E2854B812642A3B000E7CDFF /* FontExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E2854B93264305EB00E7CDFF /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				E2854B892642B49400E7CDFF /* LapType.swift */,
+				E2854B8D2642CAEB00E7CDFF /* LeftButtonType.swift */,
+			);
+			path = Enumerations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

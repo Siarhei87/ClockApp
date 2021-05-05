@@ -94,7 +94,8 @@ struct ContentView: View {
                                    height: miniWidth,
                                    color: .needleNormal,
                                    filledCenter: true)
-                            .rotationEffect(.radians(Double.pi / 2))
+                            .rotationEffect(.radians(self.viewModel
+                                .totalTimeMinuteDegree))
                             .padding(.bottom, miniPaddingBottom)
                         
                         HStack {
