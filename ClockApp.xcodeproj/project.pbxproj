@@ -23,6 +23,7 @@
 		E2854B882642B40B00E7CDFF /* LapItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B872642B40B00E7CDFF /* LapItemPresenter.swift */; };
 		E2854B8A2642B49400E7CDFF /* LapType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B892642B49400E7CDFF /* LapType.swift */; };
 		E2854B8C2642B57F00E7CDFF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B8B2642B57F00E7CDFF /* ViewModel.swift */; };
+		E2854B8E2642CAEB00E7CDFF /* LeftButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B8D2642CAEB00E7CDFF /* LeftButtonType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		E2854B872642B40B00E7CDFF /* LapItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapItemPresenter.swift; sourceTree = "<group>"; };
 		E2854B892642B49400E7CDFF /* LapType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapType.swift; sourceTree = "<group>"; };
 		E2854B8B2642B57F00E7CDFF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E2854B8D2642CAEB00E7CDFF /* LeftButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftButtonType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,16 +155,17 @@
 		E2854B7726428F8C00E7CDFF /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				E2854B4E26428F5C00E7CDFF /* ContentView.swift */,
-				E2854B7926428FF900E7CDFF /* ColorExtension.swift */,
-				E2854B7B2642928700E7CDFF /* ClockView.swift */,
-				E2854B7D2642933D00E7CDFF /* TickShape.swift */,
-				E2854B7F26429F9B00E7CDFF /* NumbersView.swift */,
-				E2854B812642A3B000E7CDFF /* FontExtension.swift */,
 				E2854B832642A69400E7CDFF /* ActionButtonStyle.swift */,
-				E2854B852642AE7400E7CDFF /* NeedleView.swift */,
+				E2854B7B2642928700E7CDFF /* ClockView.swift */,
+				E2854B7926428FF900E7CDFF /* ColorExtension.swift */,
+				E2854B4E26428F5C00E7CDFF /* ContentView.swift */,
+				E2854B812642A3B000E7CDFF /* FontExtension.swift */,
 				E2854B872642B40B00E7CDFF /* LapItemPresenter.swift */,
 				E2854B892642B49400E7CDFF /* LapType.swift */,
+				E2854B8D2642CAEB00E7CDFF /* LeftButtonType.swift */,
+				E2854B852642AE7400E7CDFF /* NeedleView.swift */,
+				E2854B7F26429F9B00E7CDFF /* NumbersView.swift */,
+				E2854B7D2642933D00E7CDFF /* TickShape.swift */,
 				E2854B8B2642B57F00E7CDFF /* ViewModel.swift */,
 			);
 			path = Screen;
@@ -309,6 +312,7 @@
 				E2854B7C2642928700E7CDFF /* ClockView.swift in Sources */,
 				E2854B822642A3B000E7CDFF /* FontExtension.swift in Sources */,
 				E2854B4F26428F5C00E7CDFF /* ContentView.swift in Sources */,
+				E2854B8E2642CAEB00E7CDFF /* LeftButtonType.swift in Sources */,
 				E2854B8026429F9B00E7CDFF /* NumbersView.swift in Sources */,
 				E2854B842642A69400E7CDFF /* ActionButtonStyle.swift in Sources */,
 				E2854B8A2642B49400E7CDFF /* LapType.swift in Sources */,

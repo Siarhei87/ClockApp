@@ -14,11 +14,14 @@ struct ContentView: View {
     private let marginTop: CGFloat = 12
     private let tickHeight: CGFloat = 8
     private let longTickHeight: CGFloat = 14
+    private let miniTickHeight: CGFloat = 6
+    private let miniLongTickHeight: CGFloat = 9
     private let tickWidth: CGFloat = 2
     private let numberPadding: CGFloat = 40
+    private let miniNumberPadding: CGFloat = 24
     private let actionButtonPadding: CGFloat = 16
     
-    private var viewModel: ViewModel = ViewModel()
+    @ObservedObject private var viewModel: ViewModel = ViewModel()
     
     var body: some View {
         ZStack {
@@ -39,29 +42,78 @@ struct ContentView: View {
                                   normalColor: .clockLinecolor)
                             .frame(width: width, height: width)
                         
+                        let miniWidth = width * 0.27
+                        let miniExtraMarginFromBottom = width * 0.1
+                        let miniPaddingBottom = miniWidth + miniExtraMarginFromBottom
+                        ClockView(count: 48,
+                                  longDivider: 2,
+                                  longTickHeight: self.miniLongTickHeight,
+                                  tickHeight: self.miniTickHeight,
+                                  tickWidth: self.tickWidth,
+                                  highlightedColorDivider: 8,
+                                  highlightedColor: .clockHighlightedLineColor,
+                                  normalColor: .clockLinecolor)
+                            .frame(width: miniWidth, height: miniWidth)
+                            .padding(.bottom, miniPaddingBottom)
+                        
                         let numberWidth = width - self.numberPadding
                         NumbersView(numbers: self.getNumbers(count: 12),
                                     font: .clockText,
                                     textColor: .clockTextColor)
                             .frame(width: numberWidth, height: numberWidth)
                         
+                        let minNumberWidth = miniWidth - self.miniNumberPadding
+                        NumbersView(numbers: self.getNumbers(count: 6),
+                                    font: .miniClockText,
+                                    textColor: .clockTextColor)
+                            .frame(width: minNumberWidth, height: minNumberWidth)
+                            .padding(.bottom, miniPaddingBottom)
+                        
+                        Text(self.viewModel.totalFormattedTime)
+                            .font(.lapText)
+                            .foregroundColor(.clockTextColor)
+                            .padding(.top, width * 0.39)
+                        
+                        if self.viewModel.currentLapDegree != nil {
+                            NeedleView(width: 8,
+                                       height: width,
+                                       color: .needleCurrentLap,
+                                       bottomLineHeight: 30,
+                                       filledCenter: false)
+                                .rotationEffect(.radians(self.viewModel.currentLapDegree!))
+                        }
+                        
                         NeedleView(width: 8,
                                    height: width,
                                    color: .needleNormal,
-                                   bottomLineHeight: 30)
+                                   bottomLineHeight: 30,
+                                   filledCenter: false)
+                            .rotationEffect(.radians(self.viewModel.totalTimeDegree))
+                        
+                        NeedleView(width: 6,
+                                   height: miniWidth,
+                                   color: .needleNormal,
+                                   filledCenter: true)
                             .rotationEffect(.radians(Double.pi / 2))
+                            .padding(.bottom, miniPaddingBottom)
                         
                         HStack {
-                            
-                            Button("Reset") {
-                                print("Test")
-                            } .buttonStyle(ActionButtonStyle(textColor: .leftButtonText, backgroundColor: .leftButton))
+                            let leftButtonFeatures = self.getLeftButtonFeatures()
+                            Button(leftButtonFeatures.0) {
+                                self.viewModel.leftButtonTapped()
+                            } .buttonStyle(ActionButtonStyle(textColor: leftButtonFeatures.1, backgroundColor: leftButtonFeatures.2))
                             
                             Spacer()
                             
-                            Button("Start") {
-                                print("Test")
-                            } .buttonStyle(ActionButtonStyle(textColor: .rightButtonText, backgroundColor: .rightButton))
+                            let rightButtonTextColor: Color = self.viewModel.isLapStarted
+                                ? .rightButtonActiveText
+                                : .rightButtonText
+                            let rightButtonBackgrounColor: Color = self.viewModel.isLapStarted
+                                ? .rightButtonActive
+                                : .rightButton
+                            Button(self.viewModel.isLapStarted ? "Stop" : "Start") {
+                                self.viewModel.rightButtonTapped()
+                            } .buttonStyle(ActionButtonStyle(textColor: rightButtonTextColor, backgroundColor: rightButtonBackgrounColor))
                             
                         } .padding(.top, width + self.actionButtonPadding)
                     }
@@ -112,6 +164,17 @@ struct ContentView: View {
             return .lapCellBest
         case .worst:
             return .lapCellWorst
+        }
+    }
+    
+    private func getLeftButtonFeatures() -> (String, Color, Color) {
+        switch self.viewModel.leftButtonType {
+        case .lapPassive:
+            return ("Lap", .leftButtonText, .leftButton)
+        case .lapActive:
+            return ("lap", .leftButtonActiveText, .leftButtonActive)
+        case .reset:
+            return ("Reset", .leftButtonActiveText, .leftButtonActive)
         }
     }
 }

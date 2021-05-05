@@ -14,6 +14,7 @@ struct NeedleView: View {
     let height: CGFloat
     let color: Color
     var bottomLineHeight: CGFloat? = nil
+    let filledCenter: Bool
     
     var body: some View {
         
@@ -23,10 +24,14 @@ struct NeedleView: View {
         VStack(spacing: 0) {
             Rectangle()
                 .fill(self.color)
-                .frame(width: quarterWidth, height: halfHeight)
-            RoundedRectangle(cornerRadius: .infinity)
-                .stroke(self.color, lineWidth: quarterWidth)
-                .frame(width: self.width, height: self.width)
+                .frame(width: quarterWidth, height: halfHeight - (self.width / 2))
+            if self.filledCenter {
+                
+            } else {
+                RoundedRectangle(cornerRadius: .infinity)
+                    .fill(self.color)
+                    .frame(width: self.width, height: self.width)
+            }
             if let bottomLineHeight = self.bottomLineHeight {
                 Rectangle()
                     .fill(self.color)

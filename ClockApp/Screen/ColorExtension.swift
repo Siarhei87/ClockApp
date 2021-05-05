@@ -22,6 +22,7 @@ extension Color {
     static let leftButtonActive = Color(red: 51/255, green: 51/255, blue: 51/255)
     static let leftButtonActiveText = Color.white
     static let needleNormal = Color(red: 241/255, green: 163/255, blue: 60/255)
+    static let needleCurrentLap = Color(red: 58/255, green: 129/255, blue: 246/255)
     static let lapCellSeparator = Color(red: 50/255, green: 50/255, blue: 50/255)
     static let lapCellNormal = Color.white
     static let lapCellBest = Color(red: 183/255, green: 205/255, blue: 183/255)
