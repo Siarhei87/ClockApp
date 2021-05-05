@@ -20,6 +20,9 @@
 		E2854B822642A3B000E7CDFF /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B812642A3B000E7CDFF /* FontExtension.swift */; };
 		E2854B842642A69400E7CDFF /* ActionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B832642A69400E7CDFF /* ActionButtonStyle.swift */; };
 		E2854B862642AE7400E7CDFF /* NeedleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B852642AE7400E7CDFF /* NeedleView.swift */; };
+		E2854B882642B40B00E7CDFF /* LapItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B872642B40B00E7CDFF /* LapItemPresenter.swift */; };
+		E2854B8A2642B49400E7CDFF /* LapType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B892642B49400E7CDFF /* LapType.swift */; };
+		E2854B8C2642B57F00E7CDFF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B8B2642B57F00E7CDFF /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		E2854B812642A3B000E7CDFF /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		E2854B832642A69400E7CDFF /* ActionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonStyle.swift; sourceTree = "<group>"; };
 		E2854B852642AE7400E7CDFF /* NeedleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleView.swift; sourceTree = "<group>"; };
+		E2854B872642B40B00E7CDFF /* LapItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapItemPresenter.swift; sourceTree = "<group>"; };
+		E2854B892642B49400E7CDFF /* LapType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapType.swift; sourceTree = "<group>"; };
+		E2854B8B2642B57F00E7CDFF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,9 @@
 				E2854B812642A3B000E7CDFF /* FontExtension.swift */,
 				E2854B832642A69400E7CDFF /* ActionButtonStyle.swift */,
 				E2854B852642AE7400E7CDFF /* NeedleView.swift */,
+				E2854B872642B40B00E7CDFF /* LapItemPresenter.swift */,
+				E2854B892642B49400E7CDFF /* LapType.swift */,
+				E2854B8B2642B57F00E7CDFF /* ViewModel.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -302,8 +311,11 @@
 				E2854B4F26428F5C00E7CDFF /* ContentView.swift in Sources */,
 				E2854B8026429F9B00E7CDFF /* NumbersView.swift in Sources */,
 				E2854B842642A69400E7CDFF /* ActionButtonStyle.swift in Sources */,
+				E2854B8A2642B49400E7CDFF /* LapType.swift in Sources */,
 				E2854B862642AE7400E7CDFF /* NeedleView.swift in Sources */,
+				E2854B882642B40B00E7CDFF /* LapItemPresenter.swift in Sources */,
 				E2854B7E2642933D00E7CDFF /* TickShape.swift in Sources */,
+				E2854B8C2642B57F00E7CDFF /* ViewModel.swift in Sources */,
 				E2854B4D26428F5C00E7CDFF /* ClockAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
