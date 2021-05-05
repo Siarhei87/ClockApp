@@ -13,6 +13,13 @@
 		E2854B5426428F6300E7CDFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2854B5326428F6300E7CDFF /* Preview Assets.xcassets */; };
 		E2854B5F26428F6300E7CDFF /* ClockAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B5E26428F6300E7CDFF /* ClockAppTests.swift */; };
 		E2854B6A26428F6300E7CDFF /* ClockAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B6926428F6300E7CDFF /* ClockAppUITests.swift */; };
+		E2854B7A26428FF900E7CDFF /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B7926428FF900E7CDFF /* ColorExtension.swift */; };
+		E2854B7C2642928700E7CDFF /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B7B2642928700E7CDFF /* ClockView.swift */; };
+		E2854B7E2642933D00E7CDFF /* TickShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B7D2642933D00E7CDFF /* TickShape.swift */; };
+		E2854B8026429F9B00E7CDFF /* NumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B7F26429F9B00E7CDFF /* NumbersView.swift */; };
+		E2854B822642A3B000E7CDFF /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B812642A3B000E7CDFF /* FontExtension.swift */; };
+		E2854B842642A69400E7CDFF /* ActionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B832642A69400E7CDFF /* ActionButtonStyle.swift */; };
+		E2854B862642AE7400E7CDFF /* NeedleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2854B852642AE7400E7CDFF /* NeedleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,13 @@
 		E2854B6526428F6300E7CDFF /* ClockAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClockAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2854B6926428F6300E7CDFF /* ClockAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockAppUITests.swift; sourceTree = "<group>"; };
 		E2854B6B26428F6300E7CDFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2854B7926428FF900E7CDFF /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		E2854B7B2642928700E7CDFF /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		E2854B7D2642933D00E7CDFF /* TickShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickShape.swift; sourceTree = "<group>"; };
+		E2854B7F26429F9B00E7CDFF /* NumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersView.swift; sourceTree = "<group>"; };
+		E2854B812642A3B000E7CDFF /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		E2854B832642A69400E7CDFF /* ActionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonStyle.swift; sourceTree = "<group>"; };
+		E2854B852642AE7400E7CDFF /* NeedleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +109,8 @@
 		E2854B4B26428F5C00E7CDFF /* ClockApp */ = {
 			isa = PBXGroup;
 			children = (
-				E2854B4C26428F5C00E7CDFF /* ClockAppApp.swift */,
-				E2854B4E26428F5C00E7CDFF /* ContentView.swift */,
+				E2854B7826428FAE00E7CDFF /* App */,
+				E2854B7726428F8C00E7CDFF /* Screen */,
 				E2854B5026428F6300E7CDFF /* Assets.xcassets */,
 				E2854B5526428F6300E7CDFF /* Info.plist */,
 				E2854B5226428F6300E7CDFF /* Preview Content */,
@@ -128,6 +142,29 @@
 				E2854B6B26428F6300E7CDFF /* Info.plist */,
 			);
 			path = ClockAppUITests;
+			sourceTree = "<group>";
+		};
+		E2854B7726428F8C00E7CDFF /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E2854B4E26428F5C00E7CDFF /* ContentView.swift */,
+				E2854B7926428FF900E7CDFF /* ColorExtension.swift */,
+				E2854B7B2642928700E7CDFF /* ClockView.swift */,
+				E2854B7D2642933D00E7CDFF /* TickShape.swift */,
+				E2854B7F26429F9B00E7CDFF /* NumbersView.swift */,
+				E2854B812642A3B000E7CDFF /* FontExtension.swift */,
+				E2854B832642A69400E7CDFF /* ActionButtonStyle.swift */,
+				E2854B852642AE7400E7CDFF /* NeedleView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		E2854B7826428FAE00E7CDFF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E2854B4C26428F5C00E7CDFF /* ClockAppApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +296,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2854B7A26428FF900E7CDFF /* ColorExtension.swift in Sources */,
+				E2854B7C2642928700E7CDFF /* ClockView.swift in Sources */,
+				E2854B822642A3B000E7CDFF /* FontExtension.swift in Sources */,
 				E2854B4F26428F5C00E7CDFF /* ContentView.swift in Sources */,
+				E2854B8026429F9B00E7CDFF /* NumbersView.swift in Sources */,
+				E2854B842642A69400E7CDFF /* ActionButtonStyle.swift in Sources */,
+				E2854B862642AE7400E7CDFF /* NeedleView.swift in Sources */,
+				E2854B7E2642933D00E7CDFF /* TickShape.swift in Sources */,
 				E2854B4D26428F5C00E7CDFF /* ClockAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
